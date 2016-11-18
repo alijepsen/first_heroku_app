@@ -1,0 +1,15 @@
+<h1> <%= @cat.name %></h1>
+<img src=<%= @cat.picture.url(:medium) %> />
+
+<p><%= @cat.age %></p>
+<p><%= @cat.gender %></p>
+<p><%= @cat.fur_color %></p>
+
+<div>
+<%= link_to 'Edit', edit_cat_path(@cat), class: 'btn btn-info' %>
+
+<%= link_to 'Delete', cat_path(@cat), method: :delete, class: 'btn btn-danger' %>
+
+<%= link_to 'All Cats', cats_path, class: 'btn btn-primary' %>
+</div>
+
